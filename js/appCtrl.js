@@ -1,10 +1,11 @@
 var numbers = [];
 for(var i = 0; i < 2000; ++i){
-    numbers.push(i);
+    numbers.push({value: i});
 }
 
 module.exports = function($scope, $translate, tmhDynamicLocale){
     $scope.selectedLocale = 'en';
+    $scope.clicks = 0;
     $scope.supportedLocales = [
         {value: 'en', name: 'English'},
         {value: 'fr', name: 'français'}

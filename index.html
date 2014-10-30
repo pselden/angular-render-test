@@ -9,8 +9,11 @@
         <select ng-model="selectedLocale" ng-change="changeLocale()">
             <option ng-repeat="locale in supportedLocales" value="{{locale.value}}">{{locale.name}}</option>
         </select>
+        <div>
+            <button ng-click="clicks = clicks + 1">Click</button> <span>Clicks: {{clicks}}</span>
+        </div>
         <ul>
-            <li ng-repeat="number in numbers">{{ number }} - {{ number | currency:'USD$' }}</li>
+            <li ng-repeat="number in numbers">{{ number.value }} - {{ number.value | currency:'USD$' }}</li>
         </ul>
     </div>
 <script src="js/bundle.js"></script>
