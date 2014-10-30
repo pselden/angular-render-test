@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <title>Angular</title>
+</head>
+<body>
+    <div ng-controller="AppCtrl">
+        <select ng-model="selectedLocale" ng-change="changeLocale()">
+            <option ng-repeat="locale in supportedLocales" value="{{locale.value}}">{{locale.name}}</option>
+        </select>
+        <ul>
+            <li ng-repeat="number in numbers">{{ number }} - {{ number | currency:'USD$' }}</li>
+        </ul>
+    </div>
+<script src="js/bundle.js"></script>
+</body>
+</html>
